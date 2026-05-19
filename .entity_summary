@@ -1,0 +1,5 @@
+- Speisekarte (speisekarte): artikel_name[string/text], kategorie[lookup/select], beschreibung[string/textarea], preis[number], verfuegbar[bool]
+- Tischverwaltung (tischverwaltung): tischnummer[string/text], sitzplaetze[number], bereich[lookup/select], tisch_hinweis[string/text]
+- Bestellerfassung (bestellerfassung): tisch[applookup/select], artikel[multipleapplookup/select], bestellzeitpunkt[date/datetimeminute], serviceperson[string/text], status[lookup/select], besondere_hinweise[string/textarea]
+  → tisch links to app_id 6a0c7e0cc5e08888032338dd
+  → artikel links to app_id 6a0c7e05738179c77a2f1273

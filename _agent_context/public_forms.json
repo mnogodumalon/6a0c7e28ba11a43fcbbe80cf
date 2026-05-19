@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "forms": [
+    {
+      "entity": "speisekarte",
+      "app_id": "6a0c7e05738179c77a2f1273",
+      "path": "/rest/apps/6a0c7e05738179c77a2f1273/records",
+      "allowed_fields": [
+        "artikel_name",
+        "kategorie",
+        "beschreibung",
+        "preis",
+        "verfuegbar"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Speisekarte — Formular"
+    },
+    {
+      "entity": "tischverwaltung",
+      "app_id": "6a0c7e0cc5e08888032338dd",
+      "path": "/rest/apps/6a0c7e0cc5e08888032338dd/records",
+      "allowed_fields": [
+        "tischnummer",
+        "sitzplaetze",
+        "bereich",
+        "tisch_hinweis"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Tischverwaltung — Formular"
+    },
+    {
+      "entity": "bestellerfassung",
+      "app_id": "6a0c7e0d8fdbde67bb981006",
+      "path": "/rest/apps/6a0c7e0d8fdbde67bb981006/records",
+      "allowed_fields": [
+        "bestellzeitpunkt",
+        "serviceperson",
+        "status",
+        "besondere_hinweise"
+      ],
+      "pow": true,
+      "pow_difficulty": 50000,
+      "title": "Bestellerfassung — Formular"
+    }
+  ]
+}

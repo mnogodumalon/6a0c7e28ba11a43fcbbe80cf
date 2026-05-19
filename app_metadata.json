@@ -1,0 +1,285 @@
+{
+  "appgroup_id": "6a0c7e28ba11a43fcbbe80cf",
+  "appgroup_name": "Restaurant Bestellsystem",
+  "apps": {
+    "speisekarte": {
+      "app_id": "6a0c7e05738179c77a2f1273",
+      "name": "Speisekarte",
+      "main": false,
+      "controls": {
+        "artikel_name": {
+          "identifier": "artikel_name",
+          "label": "Name des Artikels",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "kategorie": {
+          "identifier": "kategorie",
+          "label": "Kategorie",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "vorspeise": "Vorspeise",
+            "hauptgericht": "Hauptgericht",
+            "dessert": "Dessert",
+            "getraenk": "Getränk",
+            "beilage": "Beilage",
+            "sonstiges": "Sonstiges"
+          }
+        },
+        "beschreibung": {
+          "identifier": "beschreibung",
+          "label": "Beschreibung",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "preis": {
+          "identifier": "preis",
+          "label": "Preis (€)",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "precision": null
+        },
+        "verfuegbar": {
+          "identifier": "verfuegbar",
+          "label": "Verfügbar",
+          "type": "bool",
+          "subtype": null,
+          "fulltype": "bool",
+          "description": "A boolean value, i.e. `true` or `false` (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    },
+    "tischverwaltung": {
+      "app_id": "6a0c7e0cc5e08888032338dd",
+      "name": "Tischverwaltung",
+      "main": false,
+      "controls": {
+        "tischnummer": {
+          "identifier": "tischnummer",
+          "label": "Tischnummer",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "sitzplaetze": {
+          "identifier": "sitzplaetze",
+          "label": "Anzahl Sitzplätze",
+          "type": "number",
+          "subtype": null,
+          "fulltype": "number",
+          "description": "A decimal number value (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "precision": null
+        },
+        "bereich": {
+          "identifier": "bereich",
+          "label": "Bereich",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "innen": "Innenbereich",
+            "aussen": "Außenbereich",
+            "bar": "Bar",
+            "terrasse": "Terrasse",
+            "separee": "Separee"
+          }
+        },
+        "tisch_hinweis": {
+          "identifier": "tisch_hinweis",
+          "label": "Hinweise zum Tisch",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    },
+    "bestellerfassung": {
+      "app_id": "6a0c7e0d8fdbde67bb981006",
+      "name": "Bestellerfassung",
+      "main": false,
+      "controls": {
+        "tisch": {
+          "identifier": "tisch",
+          "label": "Tisch",
+          "type": "applookup",
+          "subtype": "select",
+          "fulltype": "applookup/select",
+          "description": "A reference to a LivingApp record from the target lookup app 'Tischverwaltung' with the id `6a0c7e0cc5e08888032338dd` (or `null`/`None`).\n\nThe field value will be a valid record URL in the form `https://my.living-apps.de/rest/apps/6a0c7e0cc5e08888032338dd/<record-id>` (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/6a0c7e0cc5e08888032338dd"
+        },
+        "artikel": {
+          "identifier": "artikel",
+          "label": "Bestellte Artikel",
+          "type": "multipleapplookup",
+          "subtype": "select",
+          "fulltype": "multipleapplookup/select",
+          "description": "Arbitrary number of referenced LivingApp records from the target lookup app 'Speisekarte' with the id `6a0c7e05738179c77a2f1273`.\n\nThe field value will be a list of valid record URLs in the form `https://my.living-apps.de/rest/apps/6a0c7e05738179c77a2f1273/<record-id>`.\n\nDisplayed as a multi-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_app": "https://my.living-apps.de/rest/apps/6a0c7e05738179c77a2f1273"
+        },
+        "bestellzeitpunkt": {
+          "identifier": "bestellzeitpunkt",
+          "label": "Bestellzeitpunkt",
+          "type": "date",
+          "subtype": "datetimeminute",
+          "fulltype": "date/datetimeminute",
+          "description": "A specific moment in time consisting of year, month, day, hour and minute (or `null`/`None`)\n\nThe field value will be a string in the format `<YYYY>-<MM>-<DD>T<HH>:<MM>` (or `null`/`None`).\n\nFor example: `2000-02-29T11:30`.\n\nFor `POST`/`PUT`/`PATCH` requests the REST API uses a liberal parsing approach so that strings like `2026`, `February 29, 2000 12:34 MEST`, `letztes Jahr` etc. will be accepted as value datetime values. However this runs the risk of parsing ambiguous values incorrectly. To ensure reliable parsing it is best to use the canonical format specified above.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "serviceperson": {
+          "identifier": "serviceperson",
+          "label": "Serviceperson",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "status": {
+          "identifier": "status",
+          "label": "Bestellstatus",
+          "type": "lookup",
+          "subtype": "select",
+          "fulltype": "lookup/select",
+          "description": "One selected option of multiple available options (or `null`/`None`).\n\nThe available options are defined in the `lookup_data` attribute of this control.\n\nThe field value will be the key in this `lookup_data` attribute (or `null`/`None`).\n\nDisplayed as single-select field in HTML pages.",
+          "required": null,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": true,
+          "in_expert_search": true,
+          "lookup_data": {
+            "offen": "Offen",
+            "in_zubereitung": "In Zubereitung",
+            "serviert": "Serviert",
+            "abgeschlossen": "Abgeschlossen",
+            "storniert": "Storniert"
+          }
+        },
+        "besondere_hinweise": {
+          "identifier": "besondere_hinweise",
+          "label": "Besondere Hinweise",
+          "type": "string",
+          "subtype": "textarea",
+          "fulltype": "string/textarea",
+          "description": "A string value that can contain multiple lines of text (or `null`/`None`).",
+          "required": null,
+          "in_list": false,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": false,
+          "in_fulltext_search": null,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Speisekarte",
+      "Tischverwaltung",
+      "Bestellerfassung"
+    ]
+  }
+}
