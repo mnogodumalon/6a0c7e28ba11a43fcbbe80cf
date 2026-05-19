@@ -7,7 +7,7 @@ import { LivingAppsService, createRecordUrl } from '@/services/livingAppsService
 import { formatDate } from '@/lib/formatters';
 import { useState, useMemo } from 'react';
 import { Skeleton } from '@/components/ui/skeleton';
-import { IconAlertCircle, IconTool, IconRefresh, IconCheck, IconPlus, IconPencil, IconTrash, IconChefHat, IconClock, IconUsers, IconMapPin, IconX, IconShoppingCart, IconReceipt } from '@tabler/icons-react';
+import { IconAlertCircle, IconTool, IconRefresh, IconCheck, IconPlus, IconPencil, IconTrash, IconChefHat, IconClock, IconUsers, IconMapPin, IconX, IconShoppingCart, IconReceipt, IconChevronRight } from '@tabler/icons-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { StatCard } from '@/components/StatCard';
@@ -112,6 +112,22 @@ export default function DashboardOverview() {
 
   return (
     <div className="space-y-6">
+      {/* Intent-Navigation */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <a
+          href="#/intents/bestellung-erfassen"
+          className="flex items-center gap-4 bg-card border border-border rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow border-l-4 border-l-primary overflow-hidden"
+        >
+          <div className="shrink-0 w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
+            <IconShoppingCart size={20} className="text-primary" stroke={1.5} />
+          </div>
+          <div className="min-w-0 flex-1">
+            <p className="font-semibold text-foreground truncate">Bestellung erfassen</p>
+            <p className="text-sm text-muted-foreground truncate">Tisch wählen · Artikel auswählen · Absenden</p>
+          </div>
+          <IconChevronRight size={18} className="shrink-0 text-muted-foreground" />
+        </a>
+      </div>
       {/* KPI-Leiste */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         <StatCard

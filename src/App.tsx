@@ -6,7 +6,6 @@ import { ErrorBoundary } from '@/components/ErrorBoundary';
 import { ErrorBusProvider } from '@/components/ErrorBus';
 import { Layout } from '@/components/Layout';
 import DashboardOverview from '@/pages/DashboardOverview';
-import { WorkflowPlaceholders } from '@/components/WorkflowPlaceholders';
 import AdminPage from '@/pages/AdminPage';
 import SpeisekartePage from '@/pages/SpeisekartePage';
 import TischverwaltungPage from '@/pages/TischverwaltungPage';
@@ -17,6 +16,7 @@ import PublicFormBestellerfassung from '@/pages/public/PublicForm_Bestellerfassu
 // <public:imports>
 // </public:imports>
 // <custom:imports>
+const BestellungErfassenPage = lazy(() => import('@/pages/intents/BestellungErfassenPage'));
 // </custom:imports>
 
 export default function App() {
@@ -32,12 +32,13 @@ export default function App() {
               {/* <public:routes> */}
               {/* </public:routes> */}
               <Route element={<Layout />}>
-                <Route index element={<><div className="mb-8"><WorkflowPlaceholders /></div><DashboardOverview /></>} />
+                <Route index element={<DashboardOverview />} />
                 <Route path="speisekarte" element={<SpeisekartePage />} />
                 <Route path="tischverwaltung" element={<TischverwaltungPage />} />
                 <Route path="bestellerfassung" element={<BestellerfassungPage />} />
                 <Route path="admin" element={<AdminPage />} />
                 {/* <custom:routes> */}
+                <Route path="intents/bestellung-erfassen" element={<Suspense fallback={null}><BestellungErfassenPage /></Suspense>} />
                 {/* </custom:routes> */}
               </Route>
             </Routes>
